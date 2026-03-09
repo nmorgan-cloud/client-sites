@@ -48,21 +48,10 @@ body::before {
   transform: scale(1.03);
 }
 
-/* Scroll-reveal classes */
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-}
-
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-40px);
-}
-
-.reveal-right {
-  opacity: 0;
-  transform: translateX(40px);
-}
+/* Scroll-reveal classes — initial state handled by GSAP, not CSS */
+.reveal {}
+.reveal-left {}
+.reveal-right {}
 
 /* Red glow */
 .red-glow {
