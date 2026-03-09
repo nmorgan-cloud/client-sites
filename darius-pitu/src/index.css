@@ -48,10 +48,35 @@ body::before {
   transform: scale(1.03);
 }
 
-/* Scroll-reveal classes — initial state handled by GSAP, not CSS */
-.reveal {}
-.reveal-left {}
-.reveal-right {}
+/* Scroll-reveal classes — CSS transitions triggered by IntersectionObserver */
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal { transform: translateY(40px); }
+.reveal-left { transform: translateX(-50px); }
+.reveal-right { transform: translateX(50px); }
+
+.reveal.in-view,
+.reveal-left.in-view,
+.reveal-right.in-view {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger children with transition-delay */
+.reveal:nth-child(2) { transition-delay: 0.06s; }
+.reveal:nth-child(3) { transition-delay: 0.12s; }
+.reveal:nth-child(4) { transition-delay: 0.18s; }
+.reveal:nth-child(5) { transition-delay: 0.24s; }
+.reveal:nth-child(6) { transition-delay: 0.30s; }
+.reveal:nth-child(7) { transition-delay: 0.36s; }
+.reveal:nth-child(8) { transition-delay: 0.42s; }
+.reveal:nth-child(9) { transition-delay: 0.48s; }
+.reveal:nth-child(10) { transition-delay: 0.54s; }
 
 /* Red glow */
 .red-glow {

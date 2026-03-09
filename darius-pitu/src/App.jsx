@@ -1,13 +1,33 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import {
   Check, X, ChevronDown, Shield, Star, Users, Zap,
   ArrowRight, Play, Clock, Target, TrendingUp, Eye,
   MessageCircle, Award, Dumbbell, Video, Phone, Calendar
 } from 'lucide-react'
 
-gsap.registerPlugin(ScrollTrigger)
+// ─────────────────────────────────────────────
+// INTERSECTION OBSERVER HOOK (replaces ScrollTrigger for reveals)
+// ─────────────────────────────────────────────
+function useReveal(ref) {
+  useEffect(() => {
+    if (!ref.current) return
+    const els = ref.current.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.08 }
+    )
+    els.forEach(el => observer.observe(el))
+    return () => observer.disconnect()
+  }, [ref])
+}
 
 // ─────────────────────────────────────────────
 // COUNTDOWN TIMER
@@ -193,15 +213,10 @@ function Hero() {
 // ─────────────────────────────────────────────
 function VSL() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current, {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
-      y: 50, opacity: 0, duration: 1, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
   return (
     <section id="vsl" ref={ref} className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto reveal">
         <div className="relative bg-navy border border-white/10 rounded-3xl aspect-video flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 50%, #1a0a08 0%, #000 70%)' }} />
           <div className="relative text-center">
@@ -231,12 +246,7 @@ function VSL() {
 // ─────────────────────────────────────────────
 function WhoItsFor() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
-      y: 40, opacity: 0, stagger: 0.06, duration: 0.8, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
 
   const forItems = [
     "You've been training for months but can't break past the basics",
@@ -306,12 +316,7 @@ function WhoItsFor() {
 // ─────────────────────────────────────────────
 function TheProblem() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
-      y: 40, opacity: 0, stagger: 0.12, duration: 0.9, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
 
   const problems = [
     { n: '01', icon: <Target size={20} />, title: 'A Plan Built For YOUR Body', body: "Generic programs don't account for your weak points, injury history, or missing prerequisites. They can't know what YOU need." },
@@ -356,12 +361,7 @@ function TheProblem() {
 // ─────────────────────────────────────────────
 function DariusMethod() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
-      y: 40, opacity: 0, stagger: 0.15, duration: 0.9, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
 
   const steps = [
     { n: '01', title: 'Assessment', desc: 'Evaluate pulling, pushing, core, and mobility across 4 dimensions. Pinpoint exactly what\'s holding you back.', icon: <Target size={18} /> },
@@ -409,15 +409,7 @@ function DariusMethod() {
 // ─────────────────────────────────────────────
 function BonusStack() {
   const ref = useRef(null)
-  useEffect(() => {
-    ref.current.querySelectorAll('.reveal-left, .reveal-right').forEach(el => {
-      gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 80%', once: true },
-        x: el.classList.contains('reveal-left') ? -50 : 50,
-        opacity: 0, duration: 1, ease: 'power3.out'
-      })
-    })
-  }, [])
+  useReveal(ref)
 
   const items = [
     {
@@ -526,12 +518,7 @@ function BonusStack() {
 // ─────────────────────────────────────────────
 function SocialProof() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
-      y: 40, opacity: 0, stagger: 0.1, duration: 0.9, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
 
   const testimonials = [
     { quote: "8 months stuck at 6 pull-ups. Darius found my bottleneck in the first assessment. 10 weeks later: first muscle-up.", name: "[Client Name]", loc: "Replace with real testimonial" },
@@ -580,12 +567,7 @@ function SocialProof() {
 // ─────────────────────────────────────────────
 function AboutDarius() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal-left, .reveal-right'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
-      x: 0, y: 40, opacity: 0, stagger: 0.1, duration: 1, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
   return (
     <section ref={ref} className="py-24 px-6">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -626,12 +608,7 @@ function AboutDarius() {
 // ─────────────────────────────────────────────
 function ValueStack() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
-      y: 40, opacity: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
 
   const tiers = [
     { name: 'Foundation', dur: '3 Months', price: '$1,500', monthly: '$550/mo', desc: 'Solid foundations + first 1–2 skill unlocks.', highlight: false },
@@ -732,15 +709,10 @@ function ValueStack() {
 // ─────────────────────────────────────────────
 function Guarantee() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current, {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
-      y: 50, opacity: 0, duration: 1, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
   return (
     <section ref={ref} className="py-24 px-6">
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="max-w-3xl mx-auto text-center reveal">
         <div className="relative bg-card border border-amber-500/20 rounded-3xl p-12 overflow-hidden">
           <div className="absolute inset-0 opacity-5" style={{ background: 'radial-gradient(circle at 50% 0%, #FFA500 0%, transparent 60%)' }} />
           <div className="relative">
@@ -767,12 +739,7 @@ function Guarantee() {
 function FAQ() {
   const [open, setOpen] = useState(null)
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
-      y: 30, opacity: 0, stagger: 0.08, duration: 0.8, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
 
   const faqs = [
     { q: "I'm a complete beginner. Can I still apply?", a: "Yes. Some of Darius's best results come from beginners. The assessment figures out where you are and the program builds from there. If you can't do a single pull-up yet, that's fine — you'll be doing sets within weeks." },
@@ -819,12 +786,7 @@ function FAQ() {
 // ─────────────────────────────────────────────
 function ApplicationForm() {
   const ref = useRef(null)
-  useEffect(() => {
-    gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
-      y: 40, opacity: 0, stagger: 0.06, duration: 0.8, ease: 'power3.out'
-    })
-  }, [])
+  useReveal(ref)
 
   const inputCls = "w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 text-sm transition-all duration-200 focus:border-brand focus:shadow-[0_0_0_3px_rgba(232,52,30,0.15)]"
   const radioCls = "flex items-center gap-3 bg-black/40 border border-white/8 rounded-xl px-4 py-3 cursor-pointer hover:border-brand/40 transition-all duration-200"
@@ -966,16 +928,6 @@ function Footer() {
 // APP
 // ─────────────────────────────────────────────
 export default function App() {
-  useEffect(() => {
-    const refresh = () => ScrollTrigger.refresh()
-    if (document.readyState === 'complete') {
-      refresh()
-    } else {
-      window.addEventListener('load', refresh)
-      return () => window.removeEventListener('load', refresh)
-    }
-  }, [])
-
   return (
     <div className="bg-void min-h-screen">
       <Navbar />
