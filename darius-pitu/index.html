@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply for 1-on-1 Coaching | The Darius Method</title>
+  <meta name="description" content="Apply for 1-on-1 calisthenics coaching with Darius Pitu. Custom programs, weekly form reviews, and the exact system behind 394K followers. Limited to 15-20 clients." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#C8F135',
+            dark: '#0A0A0A',
+            card: '#111111',
+            border: '#1E1E1E',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { background-color: #0A0A0A; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+    .brand-glow { box-shadow: 0 0 40px rgba(200, 241, 53, 0.15); }
+    .card-hover { transition: border-color 0.2s ease; }
+    .card-hover:hover { border-color: #C8F135; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-sm border-b border-border">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <span class="font-bold text-lg tracking-tight">THE DARIUS METHOD</span>
+      <a href="#apply" class="bg-brand text-black text-sm font-bold px-5 py-2 rounded-full hover:bg-brand/90 transition">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Trust bar -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <span class="text-xs font-semibold text-black bg-brand px-3 py-1 rounded-full">394K+ Instagram Followers</span>
+        <span class="text-xs font-semibold text-zinc-400 border border-border px-3 py-1 rounded-full">7+ Years Calisthenics</span>
+        <span class="text-xs font-semibold text-zinc-400 border border-border px-3 py-1 rounded-full">Limited to 15-20 Clients</span>
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+        Stop Training Blind.<br />
+        <span class="text-brand">Start Training With Someone Who's Done It.</span>
+      </h1>
+      <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+        The exact coaching system behind 394K followers and 7 years of calisthenics mastery. Now built for you. Apply for 1-on-1 coaching with Darius.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#vsl" class="border border-brand text-brand font-bold px-8 py-4 rounded-full hover:bg-brand hover:text-black transition text-lg">
+          Watch the Video
+        </a>
+        <a href="#apply" class="bg-brand text-black font-bold px-8 py-4 rounded-full hover:bg-brand/90 transition text-lg brand-glow">
+          Apply for Coaching
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VSL SECTION -->
+  <section id="vsl" class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Video placeholder -->
+      <div class="bg-card border border-border rounded-2xl aspect-video flex items-center justify-center relative overflow-hidden mb-6">
+        <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 to-dark"></div>
+        <div class="relative text-center">
+          <div class="w-20 h-20 rounded-full bg-brand flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-105 transition">
+            <svg class="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+            </svg>
+          </div>
+          <p class="text-zinc-400 text-sm">VSL Video — Paste your Vimeo or YouTube embed URL here</p>
+        </div>
+      </div>
+      <p class="text-center text-zinc-400 mb-6">Watch the full video above, then apply below if you're serious about transforming your physique and unlocking real calisthenics skills.</p>
+      <div class="text-center">
+        <a href="#apply" class="bg-brand text-black font-bold px-8 py-4 rounded-full hover:bg-brand/90 transition text-lg inline-block">Apply for Coaching</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="py-16 px-4 bg-card border-y border-border">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-2xl font-bold mb-6 text-brand">This Is For You If...</h2>
+          <ul class="space-y-4">
+            {[
+              "You've been training calisthenics for weeks or months but can't break past the basics",
+              "You want to unlock real skills (muscle-ups, handstands, front levers) but don't know the right progressions",
+              "You're tired of following random YouTube routines that don't connect to a bigger plan",
+              "You want a lean, muscular calisthenics physique — not a bulky gym-bro look",
+              "You're willing to train 4-5 days per week and follow a structured program",
+              "You want someone to actually watch your form and tell you what to fix",
+              "You've tried free programs or apps and they didn't work"
+            ].map(item => `
+              <li class="flex items-start gap-3">
+                <span class="text-brand font-bold mt-0.5 shrink-0">✓</span>
+                <span class="text-zinc-300">${item}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-6 text-zinc-500">This Is NOT For You If...</h2>
+          <ul class="space-y-4">
+            {[
+              "You're looking for a quick fix or a magic pill",
+              "You're not willing to train consistently (minimum 4 days per week)",
+              "You just want a cheap PDF to follow on your own",
+              "You're not open to feedback and coaching adjustments",
+              "You're not ready to invest in yourself and your training"
+            ].map(item => `
+              <li class="flex items-start gap-3">
+                <span class="text-zinc-600 font-bold mt-0.5 shrink-0">✗</span>
+                <span class="text-zinc-500">${item}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-black mb-8">Why You're Not Progressing<br /><span class="text-zinc-500">(It's Not Your Fault)</span></h2>
+      <p class="text-zinc-400 text-lg mb-10">The calisthenics space is flooded with content. YouTube. TikTok. Apps. Free programs. 30-day challenges. But here's what none of them give you:</p>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="bg-card border border-border rounded-2xl p-6 card-hover">
+          <div class="text-brand text-3xl font-black mb-3">01</div>
+          <h3 class="font-bold text-lg mb-2">A Plan Built For YOUR Body</h3>
+          <p class="text-zinc-400 text-sm">Generic programs don't account for your specific weak points, schedule, injury history, or which prerequisites you're missing for the skills you want.</p>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-6 card-hover">
+          <div class="text-brand text-3xl font-black mb-3">02</div>
+          <h3 class="font-bold text-lg mb-2">Someone Watching YOUR Form</h3>
+          <p class="text-zinc-400 text-sm">Bad form in calisthenics doesn't just slow progress. It causes shoulder, elbow, and wrist injuries that set you back months. One bad rep can mean 6 weeks of recovery.</p>
+        </div>
+        <div class="bg-card border border-border rounded-2xl p-6 card-hover">
+          <div class="text-brand text-3xl font-black mb-3">03</div>
+          <h3 class="font-bold text-lg mb-2">Weekly Adjustments</h3>
+          <p class="text-zinc-400 text-sm">Your body changes every week. A static program can't keep up. Real coaching means your plan evolves as you do.</p>
+        </div>
+      </div>
+      <p class="text-zinc-500 mt-8 text-lg">Without these three things, you're training blind. And training blind is why most people quit calisthenics within 6 months.</p>
+    </div>
+  </section>
+
+  <!-- THE SOLUTION -->
+  <section class="py-16 px-4 bg-card border-y border-border">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-black mb-4">The Darius Method: <span class="text-brand">Your Personal Calisthenics Roadmap</span></h2>
+        <p class="text-zinc-400 text-lg">After 7 years of daily calisthenics training and coaching dozens of athletes, Darius built a system that takes the guesswork out of bodyweight training.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex gap-4">
+          <div class="shrink-0 w-10 h-10 rounded-full bg-brand text-black font-black flex items-center justify-center">1</div>
+          <div>
+            <h3 class="font-bold text-lg mb-1">Assessment</h3>
+            <p class="text-zinc-400">We evaluate your current strength across 4 dimensions: pulling, pushing, core, and mobility. This tells us exactly where you are and what's holding you back.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="shrink-0 w-10 h-10 rounded-full bg-brand text-black font-black flex items-center justify-center">2</div>
+          <div>
+            <h3 class="font-bold text-lg mb-1">Custom Roadmap</h3>
+            <p class="text-zinc-400">Darius builds a phased training program with exact exercises, progressions, and rep schemes. Every exercise has a purpose. Nothing is random.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="shrink-0 w-10 h-10 rounded-full bg-brand text-black font-black flex items-center justify-center">3</div>
+          <div>
+            <h3 class="font-bold text-lg mb-1">Weekly Coaching</h3>
+            <p class="text-zinc-400">Every week: video form reviews, program adjustments, and a 1-on-1 check-in call. You're never more than a message away from expert guidance.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="shrink-0 w-10 h-10 rounded-full bg-brand text-black font-black flex items-center justify-center">4</div>
+          <div>
+            <h3 class="font-bold text-lg mb-1">Monthly Recalibration</h3>
+            <p class="text-zinc-400">Every 4 weeks, we reassess. Strength tests. Skill attempts. Physique photos. The program recalibrates based on your real progress.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="#apply" class="bg-brand text-black font-bold px-8 py-4 rounded-full hover:bg-brand/90 transition text-lg inline-block">Apply for Coaching</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black text-center mb-12">Everything Included in <span class="text-brand">The Darius Method</span></h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-card border border-border rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">●</span>
+            <div>
+              <p class="font-bold">Custom Training Program</p>
+              <p class="text-zinc-400 text-sm mt-1">Built from scratch for your level, goals, and schedule. Updated every week.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">●</span>
+            <div>
+              <p class="font-bold">Weekly Video Form Reviews</p>
+              <p class="text-zinc-400 text-sm mt-1">Film your sets. Get frame-by-frame feedback from Darius on technique.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">●</span>
+            <div>
+              <p class="font-bold">Weekly 1-on-1 Check-In Calls</p>
+              <p class="text-zinc-400 text-sm mt-1">15-20 min every week with Darius. Review progress. Plan ahead.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">●</span>
+            <div>
+              <p class="font-bold">24/7 Chat Access</p>
+              <p class="text-zinc-400 text-sm mt-1">WhatsApp/Telegram. Ask anything. Response within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">●</span>
+            <div>
+              <p class="font-bold">Phased Skill Roadmap</p>
+              <p class="text-zinc-400 text-sm mt-1">Visual progression map showing prerequisites and timelines for every skill.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">●</span>
+            <div>
+              <p class="font-bold">Monthly Progress Assessments</p>
+              <p class="text-zinc-400 text-sm mt-1">Strength tests, skill attempts, physique comparisons every 4 weeks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-border rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">●</span>
+            <div>
+              <p class="font-bold">Custom Nutrition Framework</p>
+              <p class="text-zinc-400 text-sm mt-1">Simple macro guidelines tailored to your body and goals.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-brand/30 rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">★</span>
+            <div>
+              <p class="font-bold">BONUS: Skill Unlock Library</p>
+              <p class="text-zinc-400 text-sm mt-1">Darius's personal progression sequences for every major skill.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-brand/30 rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">★</span>
+            <div>
+              <p class="font-bold">BONUS: Quick Win Protocol</p>
+              <p class="text-zinc-400 text-sm mt-1">14-day jumpstart plan for visible results in your first 2 weeks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card border border-brand/30 rounded-xl p-5 card-hover">
+          <div class="flex items-start gap-3">
+            <span class="text-brand text-xl shrink-0">★</span>
+            <div>
+              <p class="font-bold">BONUS: Mobility System</p>
+              <p class="text-zinc-400 text-sm mt-1">15-minute daily routine to protect shoulders, wrists, and joints.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-16 px-4 bg-card border-y border-border">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black text-center mb-4">Real Results From Real Clients</h2>
+      <p class="text-zinc-500 text-center mb-12">Replace these with Darius's actual client testimonials.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-dark border border-border rounded-2xl p-6 card-hover">
+          <div class="flex gap-1 mb-4">
+            <span class="text-brand">★★★★★</span>
+          </div>
+          <p class="text-zinc-300 mb-4">"8 months stuck at 6 pull-ups. Darius found my bottleneck in the first assessment. 10 weeks later: first muscle-up."</p>
+          <p class="text-zinc-500 text-sm font-semibold">— [Client Name], [Country]</p>
+        </div>
+        <div class="bg-dark border border-border rounded-2xl p-6 card-hover">
+          <div class="flex gap-1 mb-4">
+            <span class="text-brand">★★★★★</span>
+          </div>
+          <p class="text-zinc-300 mb-4">"Complete beginner. Couldn't do one pull-up. 6 weeks later: sets of 8. My physique completely changed."</p>
+          <p class="text-zinc-500 text-sm font-semibold">— [Client Name], [Country]</p>
+        </div>
+        <div class="bg-dark border border-border rounded-2xl p-6 card-hover">
+          <div class="flex gap-1 mb-4">
+            <span class="text-brand">★★★★★</span>
+          </div>
+          <p class="text-zinc-300 mb-4">"Shoulder was bothering me on dips. Darius caught it on form review and modified my program immediately. No other program would have caught that."</p>
+          <p class="text-zinc-500 text-sm font-semibold">— [Client Name], [Country]</p>
+        </div>
+        <div class="bg-dark border border-border rounded-2xl p-6 card-hover">
+          <div class="flex gap-1 mb-4">
+            <span class="text-brand">★★★★★</span>
+          </div>
+          <p class="text-zinc-300 mb-4">"Didn't unlock my muscle-up in 90 days. But went from 4 pull-ups to 12, handstand hold from 3s to 15s, and lost 8 pounds. The transformation was worth it."</p>
+          <p class="text-zinc-500 text-sm font-semibold">— [Client Name], [Country]</p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="#apply" class="bg-brand text-black font-bold px-8 py-4 rounded-full hover:bg-brand/90 transition text-lg inline-block">Apply for Coaching</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-card border border-border rounded-2xl aspect-square flex items-center justify-center">
+          <div class="text-center text-zinc-600">
+            <div class="text-6xl mb-3">📸</div>
+            <p class="text-sm">Add Darius photo here</p>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-3xl font-black mb-6">Who's Coaching You</h2>
+          <p class="text-zinc-400 mb-4"><strong class="text-white">Darius Pitu</strong> started calisthenics at 13 years old. No coach. No gym. Just a pull-up bar and a decision to master his body.</p>
+          <p class="text-zinc-400 mb-4">7 years later, he's built an elite-level calisthenics physique, mastered skills most people only dream of, and grown a community of 394,000+ followers who watch his journey every day.</p>
+          <p class="text-zinc-400 mb-6">He's not the oldest coach in the space. He's not the cheapest. But he might be the only one who was in your exact position 5 years ago and can show you the documented proof of every step he took to get here.</p>
+          <div class="flex gap-4">
+            <div class="text-center">
+              <p class="text-brand text-2xl font-black">394K+</p>
+              <p class="text-zinc-500 text-xs">Followers</p>
+            </div>
+            <div class="text-center">
+              <p class="text-brand text-2xl font-black">7+</p>
+              <p class="text-zinc-500 text-xs">Years Training</p>
+            </div>
+            <div class="text-center">
+              <p class="text-brand text-2xl font-black">15–20</p>
+              <p class="text-zinc-500 text-xs">Max Clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="py-16 px-4 bg-card border-y border-border">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-black text-center mb-4">Three Options. <span class="text-brand">Pick the One That Fits Your Goals.</span></h2>
+      <p class="text-center text-zinc-500 mb-12">All plans include everything listed above. More time = more results.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Foundation -->
+        <div class="bg-dark border border-border rounded-2xl p-6 flex flex-col card-hover">
+          <div class="mb-6">
+            <p class="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">Foundation</p>
+            <p class="text-3xl font-black mb-1">$1,500</p>
+            <p class="text-zinc-500 text-sm">or 3 payments of $550/mo</p>
+          </div>
+          <div class="border-t border-border pt-6 mb-6 flex-1">
+            <p class="font-semibold mb-1">3 Months</p>
+            <p class="text-zinc-400 text-sm mb-4">Best for building solid foundations + unlocking your first 1-2 skills.</p>
+            <ul class="space-y-2 text-sm text-zinc-400">
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Everything included</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> 90 days of coaching</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Skill Unlock Guarantee</li>
+            </ul>
+          </div>
+          <a href="#apply" class="border border-brand text-brand text-center font-bold py-3 rounded-full hover:bg-brand hover:text-black transition block">Apply Now</a>
+        </div>
+
+        <!-- Transformation (Recommended) -->
+        <div class="bg-dark border-2 border-brand rounded-2xl p-6 flex flex-col relative brand-glow">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand text-black text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider">Recommended</div>
+          <div class="mb-6">
+            <p class="text-brand text-sm font-semibold uppercase tracking-wider mb-1">Transformation</p>
+            <p class="text-3xl font-black mb-1">$2,500</p>
+            <p class="text-zinc-500 text-sm">or 6 payments of $467/mo</p>
+          </div>
+          <div class="border-t border-border pt-6 mb-6 flex-1">
+            <p class="font-semibold mb-1">6 Months</p>
+            <p class="text-zinc-400 text-sm mb-4">Best for full physique transformation + multiple skill unlocks.</p>
+            <ul class="space-y-2 text-sm text-zinc-400">
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Everything included</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> 6 months of coaching</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Private Community Access</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Skill Unlock Guarantee</li>
+            </ul>
+          </div>
+          <a href="#apply" class="bg-brand text-black text-center font-bold py-3 rounded-full hover:bg-brand/90 transition block">Apply Now</a>
+        </div>
+
+        <!-- Mastery -->
+        <div class="bg-dark border border-border rounded-2xl p-6 flex flex-col card-hover">
+          <div class="mb-6">
+            <p class="text-zinc-500 text-sm font-semibold uppercase tracking-wider mb-1">Mastery</p>
+            <p class="text-3xl font-black mb-1">$4,000</p>
+            <p class="text-zinc-500 text-sm">or 12 payments of $375/mo</p>
+          </div>
+          <div class="border-t border-border pt-6 mb-6 flex-1">
+            <p class="font-semibold mb-1">12 Months</p>
+            <p class="text-zinc-400 text-sm mb-4">Best for complete calisthenics mastery. Advanced skills. Elite physique.</p>
+            <ul class="space-y-2 text-sm text-zinc-400">
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Everything included</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Full year of coaching</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Private Community Access</li>
+              <li class="flex items-center gap-2"><span class="text-brand">✓</span> Skill Unlock Guarantee</li>
+            </ul>
+          </div>
+          <a href="#apply" class="border border-brand text-brand text-center font-bold py-3 rounded-full hover:bg-brand hover:text-black transition block">Apply Now</a>
+        </div>
+      </div>
+      <p class="text-center text-zinc-600 mt-6 text-sm">That's as low as $11/day. Less than your daily lunch.</p>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="bg-card border border-brand/30 rounded-3xl p-10 brand-glow">
+        <div class="text-5xl mb-4">🛡️</div>
+        <h2 class="text-2xl font-black mb-4">The Skill Unlock Guarantee</h2>
+        <p class="text-zinc-400 mb-6">Follow the program for 90 days. Do every workout. Send your weekly form videos. Show up to your check-in calls.</p>
+        <p class="text-white font-semibold text-lg mb-6">If you haven't unlocked at least one new calisthenics skill AND seen measurable strength improvements, Darius will keep coaching you for free until you do.</p>
+        <p class="text-zinc-500 text-sm">No time limit. No fine print loopholes. Plus: 7-day "right fit" window — if it's not a fit in the first week, walk away. No hard feelings.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-4 bg-card border-y border-border">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-black text-center mb-12">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="bg-dark border border-border rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+            I'm a complete beginner. Can I still apply?
+            <span class="text-brand group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-zinc-400 mt-4 text-sm">Yes. Some of Darius's best results come from beginners. You don't need a base level to start. The assessment figures out where you are, and the program builds from there. If you can't do a single pull-up yet, that's fine. You'll be doing sets within weeks.</p>
+        </details>
+        <details class="bg-dark border border-border rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+            Do I need a gym or equipment?
+            <span class="text-brand group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-zinc-400 mt-4 text-sm">A pull-up bar is recommended (a park works too). A dip station is optional but helpful. No gym required. No weights. The entire program is built around bodyweight training.</p>
+        </details>
+        <details class="bg-dark border border-border rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+            How much time does this take per day?
+            <span class="text-brand group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-zinc-400 mt-4 text-sm">Training sessions are 45-60 minutes, 4-5 days per week. Plus the 15-minute mobility routine daily. Weekly check-in calls are 15-20 minutes.</p>
+        </details>
+        <details class="bg-dark border border-border rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+            What if I've tried other programs and they didn't work?
+            <span class="text-brand group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-zinc-400 mt-4 text-sm">Programs fail because they're generic. They don't know your weak points. They don't watch your form. They don't adjust. That's exactly why 1-on-1 coaching exists. This is a fundamentally different experience.</p>
+        </details>
+        <details class="bg-dark border border-border rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+            Is there a payment plan?
+            <span class="text-brand group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-zinc-400 mt-4 text-sm">Yes. All three options have monthly payment plans available. Discussed on your application call.</p>
+        </details>
+        <details class="bg-dark border border-border rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+            What's the application process?
+            <span class="text-brand group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="text-zinc-400 mt-4 text-sm">Fill out the short form below (2 minutes). Darius personally reviews every application. If it looks like a fit, you'll book a 15-minute call to discuss your goals and get your questions answered. No pressure, no hard sell.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section id="apply" class="py-16 px-4">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-black mb-4">Ready to Stop Guessing and <span class="text-brand">Start Progressing?</span></h2>
+        <p class="text-zinc-400">Spots are limited to 15-20 active clients. Darius reviews every application personally. Fill out the form and you'll hear back within 24-48 hours.</p>
+      </div>
+
+      <form class="bg-card border border-border rounded-2xl p-8 space-y-6" action="#" method="POST">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold mb-2" for="first_name">First Name *</label>
+            <input type="text" id="first_name" name="first_name" required class="w-full bg-dark border border-border rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-brand" placeholder="Your first name" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2" for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required class="w-full bg-dark border border-border rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-brand" placeholder="your@email.com" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2" for="instagram">Instagram Handle <span class="text-zinc-500 font-normal">(so Darius can see where you are)</span></label>
+          <input type="text" id="instagram" name="instagram" class="w-full bg-dark border border-border rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-brand" placeholder="@yourhandle" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2">How long have you been training calisthenics? *</label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="experience" value="beginner_new" class="accent-brand" required /> <span class="text-sm">Just starting (&lt;3 months)</span>
+            </label>
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="experience" value="beginner" class="accent-brand" /> <span class="text-sm">Beginner (3-6 months)</span>
+            </label>
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="experience" value="intermediate" class="accent-brand" /> <span class="text-sm">Intermediate (6-12 months)</span>
+            </label>
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="experience" value="experienced" class="accent-brand" /> <span class="text-sm">Experienced (1+ year)</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2">What's the #1 skill you want to unlock? *</label>
+          <select name="goal_skill" required class="w-full bg-dark border border-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand">
+            <option value="" disabled selected>Select your goal</option>
+            <option value="muscle_up">Muscle-up</option>
+            <option value="handstand">Handstand</option>
+            <option value="front_lever">Front Lever</option>
+            <option value="back_lever">Back Lever</option>
+            <option value="planche">Planche progressions</option>
+            <option value="physique">I just want to build a great physique</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2" for="what_tried">What have you tried so far that hasn't worked? *</label>
+          <textarea id="what_tried" name="what_tried" required rows="3" class="w-full bg-dark border border-border rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-brand resize-none" placeholder="YouTube videos, apps, programs... what happened?"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2" for="why_now">Why are you applying now? What made today the day? *</label>
+          <textarea id="why_now" name="why_now" required rows="3" class="w-full bg-dark border border-border rounded-xl px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-brand resize-none" placeholder="Be honest. This helps Darius understand where you're at."></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2">Which program are you most interested in? *</label>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="program" value="foundation" class="accent-brand" required /> <span class="text-sm">Foundation — 3 months ($1,500)</span>
+            </label>
+            <label class="flex items-center gap-3 bg-dark border border-brand/40 rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="program" value="transformation" class="accent-brand" /> <span class="text-sm">Transformation — 6 months ($2,500) <span class="text-brand text-xs font-semibold ml-1">RECOMMENDED</span></span>
+            </label>
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="program" value="mastery" class="accent-brand" /> <span class="text-sm">Mastery — 12 months ($4,000)</span>
+            </label>
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="program" value="unsure" class="accent-brand" /> <span class="text-sm">Not sure yet — I'll decide on the call</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2">Are you ready to start within the next 2 weeks? *</label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="start_ready" value="yes" class="accent-brand" required /> <span class="text-sm">Yes, I'm ready</span>
+            </label>
+            <label class="flex items-center gap-3 bg-dark border border-border rounded-xl px-4 py-3 cursor-pointer hover:border-brand transition">
+              <input type="radio" name="start_ready" value="soon" class="accent-brand" /> <span class="text-sm">Need a bit of time</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-brand text-black font-black text-lg py-4 rounded-full hover:bg-brand/90 transition brand-glow">
+          Submit My Application →
+        </button>
+
+        <p class="text-center text-zinc-500 text-sm">After you submit, you'll be redirected to book a quick call with Darius. Spots are limited.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-border py-8 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="font-bold text-lg mb-2">THE DARIUS METHOD</p>
+      <p class="text-zinc-600 text-sm">Questions? DM <a href="https://instagram.com/dariusworkout" class="text-brand hover:underline" target="_blank">@dariusworkout</a> on Instagram.</p>
+      <p class="text-zinc-700 text-xs mt-4">© 2025 The Darius Method. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
