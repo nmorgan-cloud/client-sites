@@ -86,22 +86,18 @@ function Hero() {
   const heroRef = useRef(null)
   const headRef = useRef(null)
   const subRef = useRef(null)
-  const ctaRef = useRef(null)
-  const mockupRef = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
       tl.from(headRef.current.children, { y: 60, opacity: 0, stagger: 0.08, duration: 1 })
         .from(subRef.current, { y: 30, opacity: 0, duration: 0.8 }, '-=0.4')
-        .from(ctaRef.current.children, { y: 20, opacity: 0, stagger: 0.1, duration: 0.6 }, '-=0.4')
-        .from(mockupRef.current, { y: 50, opacity: 0, duration: 1 }, '-=0.3')
     }, heroRef)
     return () => ctx.revert()
   }, [])
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section ref={heroRef} className="relative flex items-center justify-center overflow-hidden pt-32 pb-12">
       {/* Geometric background panels */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -120,7 +116,7 @@ function Hero() {
           style={{ background: 'radial-gradient(circle, #E8341E 0%, transparent 70%)' }} />
       </div>
 
-      <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 border border-brand/30 bg-brand/10 px-4 py-1.5 rounded-full text-xs font-semibold text-brand mb-8 backdrop-blur-sm">
           <span className="w-1.5 h-1.5 bg-brand rounded-full animate-pulse" />
@@ -129,16 +125,10 @@ function Hero() {
 
         <div ref={headRef}>
           <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-2">
-            Stop Training
+            Stop Training <span className="text-brand">Blind.</span>
           </h1>
-          <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-2">
-            <span className="text-brand">Blind.</span>
-          </h1>
-          <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-6 text-white/90">
-            Start Training With
-          </h1>
-          <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-8">
-            Someone Who's{' '}
+          <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-8 text-white/90">
+            Start Training With Someone Who's{' '}
             <span className="relative inline-block">
               <span className="text-brand">Done It.</span>
               <span className="absolute -bottom-1 left-0 right-0 h-px bg-brand opacity-40" />
@@ -146,63 +136,10 @@ function Hero() {
           </h1>
         </div>
 
-        <p ref={subRef} className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p ref={subRef} className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
           The exact system behind 394K followers and 7 years of calisthenics mastery.
           Now built around your body, your goals, and your schedule.
         </p>
-
-        <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <a href="#apply" className="btn-magnetic bg-brand text-white font-bold px-10 py-4 rounded-full text-lg red-glow w-full sm:w-auto text-center">
-            Apply for Coaching →
-          </a>
-          <a href="#vsl" className="btn-magnetic flex items-center gap-3 border border-white/15 text-white/80 hover:text-white px-8 py-4 rounded-full text-lg w-full sm:w-auto justify-center transition-colors">
-            <div className="w-8 h-8 rounded-full bg-brand/20 border border-brand/40 flex items-center justify-center shrink-0">
-              <Play size={12} className="text-brand ml-0.5" fill="currentColor" />
-            </div>
-            Watch the VSL
-          </a>
-        </div>
-
-        {/* Stats bar */}
-        <div ref={mockupRef} className="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-12">
-          {[
-            { num: '394K+', label: 'Followers' },
-            { num: '7+', label: 'Years Training' },
-            { num: '15–20', label: 'Max Clients' },
-          ].map(s => (
-            <div key={s.label} className="bg-white/[0.04] border border-white/8 rounded-2xl py-4 px-2 backdrop-blur-sm">
-              <div className="text-2xl font-black text-brand">{s.num}</div>
-              <div className="text-xs text-white/40 mt-1">{s.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Mockup card */}
-        <div className="bg-navy/80 border border-white/10 rounded-3xl p-6 backdrop-blur-sm red-glow-sm">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-3 h-3 rounded-full bg-red-500" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500" />
-            <div className="w-3 h-3 rounded-full bg-green-500" />
-            <span className="font-mono text-white/30 text-xs ml-2">darius-method-dashboard</span>
-          </div>
-          <div className="grid grid-cols-3 gap-3 mb-4">
-            {[
-              { label: 'Active Phase', val: 'Phase 1 — Week 3', color: 'brand' },
-              { label: 'Pull-ups', val: '↑ 4 → 11', color: 'green-400' },
-              { label: 'Next Check-in', val: 'Thursday 7PM', color: 'white/60' },
-            ].map(item => (
-              <div key={item.label} className="bg-black/40 rounded-xl p-3 text-left">
-                <div className="text-white/30 text-[10px] font-mono mb-1">{item.label}</div>
-                <div className={`text-${item.color} font-bold text-sm`}>{item.val}</div>
-              </div>
-            ))}
-          </div>
-          <div className="bg-brand/10 border border-brand/20 rounded-xl p-3 text-left">
-            <div className="text-white/40 text-[10px] font-mono mb-1">Latest form feedback</div>
-            <p className="text-white/80 text-sm">"Your scapular engagement is much cleaner. Pull elbows down and back harder in the top 20%. That's what's holding the muscle-up back."</p>
-            <div className="text-brand text-xs mt-2 font-semibold">— Darius</div>
-          </div>
-        </div>
       </div>
     </section>
   )
