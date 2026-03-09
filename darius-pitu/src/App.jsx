@@ -195,7 +195,7 @@ function VSL() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current, {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
       y: 50, opacity: 0, duration: 1, ease: 'power3.out'
     })
   }, [])
@@ -233,7 +233,7 @@ function WhoItsFor() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
       y: 40, opacity: 0, stagger: 0.06, duration: 0.8, ease: 'power3.out'
     })
   }, [])
@@ -308,7 +308,7 @@ function TheProblem() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
       y: 40, opacity: 0, stagger: 0.12, duration: 0.9, ease: 'power3.out'
     })
   }, [])
@@ -358,7 +358,7 @@ function DariusMethod() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
       y: 40, opacity: 0, stagger: 0.15, duration: 0.9, ease: 'power3.out'
     })
   }, [])
@@ -412,7 +412,7 @@ function BonusStack() {
   useEffect(() => {
     ref.current.querySelectorAll('.reveal-left, .reveal-right').forEach(el => {
       gsap.from(el, {
-        scrollTrigger: { trigger: el, start: 'top 80%' },
+        scrollTrigger: { trigger: el, start: 'top 80%', once: true },
         x: el.classList.contains('reveal-left') ? -50 : 50,
         opacity: 0, duration: 1, ease: 'power3.out'
       })
@@ -528,7 +528,7 @@ function SocialProof() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
       y: 40, opacity: 0, stagger: 0.1, duration: 0.9, ease: 'power3.out'
     })
   }, [])
@@ -582,7 +582,7 @@ function AboutDarius() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal-left, .reveal-right'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
       x: 0, y: 40, opacity: 0, stagger: 0.1, duration: 1, ease: 'power3.out'
     })
   }, [])
@@ -628,7 +628,7 @@ function ValueStack() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 75%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 75%', once: true },
       y: 40, opacity: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out'
     })
   }, [])
@@ -734,7 +734,7 @@ function Guarantee() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current, {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
       y: 50, opacity: 0, duration: 1, ease: 'power3.out'
     })
   }, [])
@@ -769,7 +769,7 @@ function FAQ() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
       y: 30, opacity: 0, stagger: 0.08, duration: 0.8, ease: 'power3.out'
     })
   }, [])
@@ -821,7 +821,7 @@ function ApplicationForm() {
   const ref = useRef(null)
   useEffect(() => {
     gsap.from(ref.current.querySelectorAll('.reveal'), {
-      scrollTrigger: { trigger: ref.current, start: 'top 80%' },
+      scrollTrigger: { trigger: ref.current, start: 'top 80%', once: true },
       y: 40, opacity: 0, stagger: 0.06, duration: 0.8, ease: 'power3.out'
     })
   }, [])
@@ -966,6 +966,16 @@ function Footer() {
 // APP
 // ─────────────────────────────────────────────
 export default function App() {
+  useEffect(() => {
+    const refresh = () => ScrollTrigger.refresh()
+    if (document.readyState === 'complete') {
+      refresh()
+    } else {
+      window.addEventListener('load', refresh)
+      return () => window.removeEventListener('load', refresh)
+    }
+  }, [])
+
   return (
     <div className="bg-void min-h-screen">
       <Navbar />
