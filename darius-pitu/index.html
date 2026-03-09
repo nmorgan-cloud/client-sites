@@ -29,7 +29,7 @@
     body { background-color: #0A0A0A; color: #FFFFFF; font-family: 'Inter', sans-serif; }
     .brand-glow { box-shadow: 0 0 40px rgba(232, 52, 30, 0.2); }
     .card-hover { transition: border-color 0.2s ease; }
-    .card-hover:hover { border-color: #C8F135; }
+    .card-hover:hover { border-color: #E8341E; }
     html { scroll-behavior: smooth; }
   </style>
 </head>
@@ -101,37 +101,23 @@
         <div>
           <h2 class="text-2xl font-bold mb-6 text-brand">This Is For You If...</h2>
           <ul class="space-y-4">
-            {[
-              "You've been training calisthenics for weeks or months but can't break past the basics",
-              "You want to unlock real skills (muscle-ups, handstands, front levers) but don't know the right progressions",
-              "You're tired of following random YouTube routines that don't connect to a bigger plan",
-              "You want a lean, muscular calisthenics physique — not a bulky gym-bro look",
-              "You're willing to train 4-5 days per week and follow a structured program",
-              "You want someone to actually watch your form and tell you what to fix",
-              "You've tried free programs or apps and they didn't work"
-            ].map(item => `
-              <li class="flex items-start gap-3">
-                <span class="text-brand font-bold mt-0.5 shrink-0">✓</span>
-                <span class="text-zinc-300">${item}</span>
-              </li>
-            `).join('')}
+            <li class="flex items-start gap-3"><span class="text-brand font-bold mt-0.5 shrink-0">✓</span><span class="text-zinc-300">You've been training calisthenics for weeks or months but can't break past the basics</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand font-bold mt-0.5 shrink-0">✓</span><span class="text-zinc-300">You want to unlock real skills (muscle-ups, handstands, front levers) but don't know the right progressions</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand font-bold mt-0.5 shrink-0">✓</span><span class="text-zinc-300">You're tired of following random YouTube routines that don't connect to a bigger plan</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand font-bold mt-0.5 shrink-0">✓</span><span class="text-zinc-300">You want a lean, muscular calisthenics physique — not a bulky gym-bro look</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand font-bold mt-0.5 shrink-0">✓</span><span class="text-zinc-300">You're willing to train 4-5 days per week and follow a structured program</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand font-bold mt-0.5 shrink-0">✓</span><span class="text-zinc-300">You want someone to actually watch your form and tell you what to fix</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand font-bold mt-0.5 shrink-0">✓</span><span class="text-zinc-300">You've tried free programs or apps and they didn't work</span></li>
           </ul>
         </div>
         <div>
           <h2 class="text-2xl font-bold mb-6 text-zinc-500">This Is NOT For You If...</h2>
           <ul class="space-y-4">
-            {[
-              "You're looking for a quick fix or a magic pill",
-              "You're not willing to train consistently (minimum 4 days per week)",
-              "You just want a cheap PDF to follow on your own",
-              "You're not open to feedback and coaching adjustments",
-              "You're not ready to invest in yourself and your training"
-            ].map(item => `
-              <li class="flex items-start gap-3">
-                <span class="text-zinc-600 font-bold mt-0.5 shrink-0">✗</span>
-                <span class="text-zinc-500">${item}</span>
-              </li>
-            `).join('')}
+            <li class="flex items-start gap-3"><span class="text-zinc-600 font-bold mt-0.5 shrink-0">✗</span><span class="text-zinc-500">You're looking for a quick fix or a magic pill</span></li>
+            <li class="flex items-start gap-3"><span class="text-zinc-600 font-bold mt-0.5 shrink-0">✗</span><span class="text-zinc-500">You're not willing to train consistently (minimum 4 days per week)</span></li>
+            <li class="flex items-start gap-3"><span class="text-zinc-600 font-bold mt-0.5 shrink-0">✗</span><span class="text-zinc-500">You just want a cheap PDF to follow on your own</span></li>
+            <li class="flex items-start gap-3"><span class="text-zinc-600 font-bold mt-0.5 shrink-0">✗</span><span class="text-zinc-500">You're not open to feedback and coaching adjustments</span></li>
+            <li class="flex items-start gap-3"><span class="text-zinc-600 font-bold mt-0.5 shrink-0">✗</span><span class="text-zinc-500">You're not ready to invest in yourself and your training</span></li>
           </ul>
         </div>
       </div>
